@@ -7,7 +7,7 @@
 //	С клавиатуры вводится номер месяца. Требуется определить, к какому времени года он относится.
 // Выполнил Виль В. В.
 
-int main(void)
+int main()
 {
 	int answ = 0;
 	setlocale(LC_ALL, "RU");
@@ -25,6 +25,7 @@ int main(void)
 	{
 	case 1:
 	case 2:
+	case 12:
 		printf("Холодная Зима");
 		break;
 	case 3:
@@ -41,9 +42,6 @@ int main(void)
 	case 10:
 	case 11:
 		printf("Желтая Осень");
-		break;
-	case 12:
-		printf("Холодная Зима");
 		break;
 	default:
 		break;
