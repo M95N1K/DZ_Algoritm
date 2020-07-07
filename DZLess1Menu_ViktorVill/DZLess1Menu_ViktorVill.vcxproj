@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{50600bd6-09e6-436c-835c-6373191c6b61}</ProjectGuid>
-    <RootNamespace>DZ_Algoritm</RootNamespace>
+    <ProjectGuid>{c3faf727-9fef-4547-a2f2-6d93114fdbd5}</ProjectGuid>
+    <RootNamespace>DZLess1Menu_ViktorVill</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -140,7 +140,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="MainSource.c" />
+    <ClCompile Include="Main.c" />
+    <ClCompile Include="Task1.c" />
+    <ClCompile Include="Task2.c" />
+    <ClCompile Include="Task3.c" />
+    <ClCompile Include="Task5.c" />
+    <ClCompile Include="Task7.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Task1.h" />
+    <ClInclude Include="Task2.h" />
+    <ClInclude Include="Task3.h" />
+    <ClInclude Include="Task5.h" />
+    <ClInclude Include="Task7.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
