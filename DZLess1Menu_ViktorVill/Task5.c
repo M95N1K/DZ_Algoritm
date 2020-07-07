@@ -1,20 +1,17 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <locale.h>
-#pragma warning(disable : 4996)
+#include "Task5.h"
 
 // Задание №5
 //	С клавиатуры вводится номер месяца. Требуется определить, к какому времени года он относится.
 // Выполнил Виль В. В.
 
-int main()
+int task5()
 {
 	int answ = 0;
 	setlocale(LC_ALL, "RU");
 	setlocale(LC_NUMERIC, "C");
 	printf("Введите номер месяца\n");
 
-	while ((scanf("%d",&answ) != 1) || !(0 < answ && answ < 13))
+	while ((scanf("%d", &answ) != 1) || !(0 < answ && answ < 13))
 	{
 		system("cls");
 		printf("Введите номер месяца (От 1 До 12)\n");
@@ -47,6 +44,5 @@ int main()
 		break;
 	}
 
-	getch();
 	return 0;
 }

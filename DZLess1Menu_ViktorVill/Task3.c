@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <locale.h>
-#pragma warning(disable : 4996)
+#include "Task3.h"
 
 // Задание №3
 //	Написать программу обмена значениями двух целочисленных переменных:
@@ -30,7 +27,7 @@ int menu()
 	}
 }
 
-int main()
+int task3()
 {
 	int a, b;
 	int tmp;
@@ -44,26 +41,25 @@ int main()
 
 	switch (menu())
 	{
-		case 1:
-			tmp = a;
-			a = b;
-			b = tmp;
-			break;
-		case 2:
-			a = a + b;
-			b = a - b;
-			a = a - b;
-			break;
-		case 3:
-			a = a ^ b;
-			b = a ^ b;
-			a = a ^ b;
-			break;
-		default:
-			break;
+	case 1:
+		tmp = a;
+		a = b;
+		b = tmp;
+		break;
+	case 2:
+		a = a + b;
+		b = a - b;
+		a = a - b;
+		break;
+	case 3:
+		a = a ^ b;
+		b = a ^ b;
+		a = a ^ b;
+		break;
+	default:
+		break;
 	}
 	printf("%s %d\n%s %d\n", "Число А:", a, "Число B:", b);
 
-	getch();
 	return 0;
 }

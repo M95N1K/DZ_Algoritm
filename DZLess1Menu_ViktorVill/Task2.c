@@ -1,12 +1,10 @@
-#include <stdio.h>
-#include <locale.h>
-#pragma warning(disable : 4996)
+#include "Task2.h"
 
 // Задание №2
 //	Найти максимальное из четырех чисел. Массивы не использовать.
 // Выполнил Виль В. В.
 
-int main()
+int task2()
 {
 	int a, b, c, d;
 	int count;
@@ -48,6 +46,5 @@ int main()
 		a = c;
 
 	printf("%s %d", "Максимальное число:", a);
-	getch();
 	return 0;
 }

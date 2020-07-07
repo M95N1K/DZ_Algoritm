@@ -1,10 +1,10 @@
-#include <stdio.h>
+#include "Task1.h"
 #pragma warning(disable : 4996)
-
 // Задание №1
-//	Ввести вес и рост человека. Рассчитать и вывести индекс массы тела по формуле I=m/(h*h); где m-масса тела в килограммах, h - рост в метрах.
+//	Ввести вес и рост человека. Рассчитать и вывести индекс массы тела по формуле I=m/(h*h); 
+//	где m-масса тела в килограммах, h - рост в метрах.
 // Выполнил Виль В. В.
-int main()
+int task1()
 {
 	double height;
 	double weight;
@@ -14,10 +14,9 @@ int main()
 
 	printf("Enter the weight in kilograms: ");
 	scanf("%lf", &weight);
-	
+
 
 	printf("Mass index is %lf\n", weight / (height * height));
-	
-	getch();
+
 	return 0;
 }

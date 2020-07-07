@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <locale.h>
+#include "Task7.h"
 #pragma warning(disable : 4996)
 #define Point struct Points
 
@@ -32,7 +31,7 @@ int IsWhite(Point a)
 	return 0;
 }
 
-int main()
+int task7()
 {
 	Point a, b;
 	setlocale(LC_ALL, "RU");
@@ -72,6 +71,5 @@ int main()
 	else
 		printf("÷вета разные");
 
-	getch();
 	return 0;
 }
