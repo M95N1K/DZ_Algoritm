@@ -9,17 +9,20 @@
 
 int task2()
 {
+#pragma region Ввод данных
 	int a, b;
 	int num = 0;
 	printf("Задача возведения числа A в степень B: \n");
 	printf("Введите числа A и B через пробел: \n");
 
-	while ((scanf("%d %d", &a,&b) != 2))
+	while ((scanf("%d %d", &a, &b) != 2))
 	{
 		printf("Неверный ввод");
 		while (getchar() != '\n');
 	}
+#pragma endregion
 
+#pragma region Menu
 	printf("Выберите метод решения: \n");
 	printf("\t1. Без рекурсии: \n");
 	printf("\t2. Рекурсивно: \n");
@@ -27,9 +30,10 @@ int task2()
 
 	while ((scanf("%d", &num) != 1) || !(num == 1 || num == 2 || num ==3))
 	{
-		printf("Неверный ввод");
+		printf("Неверный ввод\n");
 		while (getchar() != '\n');
 	}
+#pragma endregion
 
 	switch (num)
 	{
