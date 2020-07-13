@@ -2,6 +2,7 @@
 #include <locale.h>
 #include "Task1.h"
 #include "Task2.h"
+#include "Task3.h"
 #pragma warning(disable : 4996)
 
 int main()
@@ -12,6 +13,7 @@ int main()
 	printf("Выберите задачу для решения: \n");
 	printf("\t1. Реализовать функцию перевода чисел из десятичной системы в двоичную, используя рекурсию.: \n");
 	printf("\t2. Реализовать функцию возведения числа a в степень b: \n");
+	printf("\t3. Задача с калькулятором \n");
 	while ((scanf("%d",&num) != 1) || !(num == 1 || num == 2 || num == 3))
 	{
 		printf("Неверный ввод");
@@ -25,6 +27,9 @@ int main()
 		break;
 	case 2:
 		task2();
+		break;
+	case 3:
+		task3();
 		break;
 	
 	default:
