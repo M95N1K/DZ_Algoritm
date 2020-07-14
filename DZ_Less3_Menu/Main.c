@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <locale.h>
+#include "Task1.h"
+#include "Task2.h"
+#include "Task3.h"
 
 #pragma warning(disable : 4996)
 
