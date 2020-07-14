@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <locale.h>
+#include "Task1.h"
+#include "Task2.h"
 
 #pragma warning(disable : 4996)
 
@@ -21,8 +23,10 @@ int main()
 	switch (num)
 	{
 	case 1:
+		task1();
 		break;
 	case 2:
+		task2();
 		break;
 	case 3:
 		break;
