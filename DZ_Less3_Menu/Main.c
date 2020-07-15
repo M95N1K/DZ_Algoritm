@@ -30,6 +30,7 @@ int main()
 		task2();
 		break;
 	case 3:
+		task3();
 		break;
 
 	default:
