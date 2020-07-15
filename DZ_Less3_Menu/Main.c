@@ -24,8 +24,10 @@ int main()
 	switch (num)
 	{
 	case 1:
+		task1();
 		break;
 	case 2:
+		task2();
 		break;
 	case 3:
 		break;
