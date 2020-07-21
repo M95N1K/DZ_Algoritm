@@ -1,5 +1,6 @@
 #include "Task1.h"
 #pragma warning(disable : 4996)
+#define C int
 
 //Задание №1
 //	Реализовать перевод из десятичной в двоичную систему счисления с использованием стека.
@@ -7,13 +8,11 @@
 
 struct TNode
 {
-	int value;
-	struct Node* next;
+	C value;
+	Node* next;
 };
 
-Node Head;
-
-void push(Node *Stack, int value)
+void push(Node *Stack, C value)
 {
 	if (Stack->next == NULL && Stack->value == -1)
 	{
@@ -28,9 +27,9 @@ void push(Node *Stack, int value)
 	Stack->value = value;
 	Stack->next = node;
 }
-int pop(Node* Stack)
+C pop(Node* Stack)
 {
-	int result;
+	C result;
 	if (Stack->next != NULL)
 	{
 		result = Stack->value;
@@ -48,25 +47,25 @@ int pop(Node* Stack)
 }
 
 
-void DecToBin(int num)
+void DecToBin(int num,Node *Head)
 {
 	while(num > 1)
 	{
 		if (num % 2 == 0)
 		{
-			push(&Head, 0);
+			push(Head, 0);
 			num /= 2;
 		}
 		else
 		{
-			push(&Head, 1);
+			push(Head, 1);
 			num = (num - 1) / 2;
 		}
 	}
 	if (num ==0)
-		push(&Head, 0);
+		push(Head, 0);
 	if (num == 1)
-		push(&Head, 1);
+		push(Head, 1);
 }
 
 void WriteStack(Node *Stack)
@@ -95,6 +94,7 @@ void FreeStack(Node* Stack)
 
 void task1()
 {
+	Node Head;
 	Head.next = NULL;
 	Head.value = -1;
 	int num = 0;
@@ -105,7 +105,7 @@ void task1()
 		while (getchar() != '\n');
 	}
 
-	DecToBin(num);
+	DecToBin(num,&Head);
 	WriteStack(&Head);
 	FreeStack(&Head);
 }
