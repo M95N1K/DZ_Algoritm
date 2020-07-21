@@ -11,44 +11,41 @@ struct TNode
 	struct Node* next;
 };
 
-struct TStack
-{
-	Node* head;
-};
+Node Head;
 
-TStack Head;
-
-void push(TStack *St, int value)
+void push(Node *Stack, int value)
 {
-	Node* Stack = St->head;
-	if (Stack == NULL)
+	if (Stack->next == NULL && Stack->value == -1)
 	{
-		Stack = (Node*)calloc(1, sizeof(Node));
 		Stack->value = value;
 		Stack->next = NULL;
-		St->head = Stack;
 		return;
 	}
 	Node* node;
 	node = (Node*)calloc(1, sizeof(Node));
-	node->value = value;
-	node->next = Stack;
-	Stack = node;
-	St->head = Stack;
+	node->value = Stack->value;
+	node->next = Stack->next;
+	Stack->value = value;
+	Stack->next = node;
 }
-int pop(TStack* St)
+int pop(Node* Stack)
 {
-	Node* Stack = St->head;
-	if (Stack == NULL)
-		return -1;
-	int result = Stack->value;
-	Node* tmp = Stack;
-	Stack = Stack->next;
-	St->head = Stack;
-	free(tmp);
+	int result;
+	if (Stack->next != NULL)
+	{
+		result = Stack->value;
+		Node* tmp = Stack->next;
+		Stack->value = tmp->value;
+		Stack->next = tmp->next;
+		free(tmp);
+	}
+	else
+	{
+		result = Stack->value;
+		Stack->value = -1;
+	}
 	return result;
 }
-
 
 
 void DecToBin(int num)
@@ -85,20 +82,21 @@ void WriteStack(Node *Stack)
 	printf("\n");
 }
 
-void FreeStack(TStack* St)
+void FreeStack(Node* Stack)
 {
-	Node* Stack = St->head;
-	while (Stack != NULL)
+	while (Stack->next != NULL)
 	{
-		Node* tmp = Stack;
-		Stack = Stack->next;
+		Node* tmp = Stack->next;
+		Stack->next = tmp->next;
 		free(tmp);
 	}
+	Stack->value = -1;
 }
 
 void task1()
 {
-	Head.head = NULL;
+	Head.next = NULL;
+	Head.value = -1;
 	int num = 0;
 	printf("¬ведите положительное число: ");
 	while ((scanf("%d", &num) != 1) || !(num >= 0))
