@@ -30,6 +30,12 @@
     <ClCompile Include="Task6.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="UList.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Task4.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Task1.h">
@@ -42,6 +48,12 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Task6.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="UList.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Task4.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

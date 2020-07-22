@@ -16,7 +16,7 @@ void task6()
 
 	while (MyQueue.Count > 0)
 	{
-		printf("%c", GetQueue(&MyQueue));
+		printf("[%c]\n", GetQueue(&MyQueue));
 	}
 
 	FreeQueue(&MyQueue);
