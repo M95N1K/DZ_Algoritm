@@ -113,15 +113,50 @@ void postOrderTravers(Node* root)
 	}
 }
 
+Node* SearchRecurcive(int value, Node * root)
+{
+	if (root == NULL)
+		return NULL;
+	Node* result;
+	if (value == root->value)
+		result = root;
+	else if (value > root->value)
+		result = SearchRecurcive(value, root->right);
+	else
+		result = SearchRecurcive(value, root->left);
+	return result;
+}
+
+Node* SearchCicle(int value, Node * tree)
+{
+	Node* root = tree;
+	if (root == NULL)
+		return NULL;
+
+	while (root)
+	{
+		if (root->value == value)
+			return root;
+		else if (value > root->value)
+			root = root->right;
+		else root = root->left;
+	}
+}
+
 void task2()
 {
 	srand(1);
 	Node* tree = NULL;
 	printTree(tree);
-
+	int tmp = 0;
 	int count = 20;
 	for (int i = 0; i < count; i++)
-		insert(&tree, rand() % 100);
+	{
+		int c = rand() % 100;
+		insert(&tree, c);
+		if (i == count / 2)
+			tmp = c;
+	}
 	printf("Вывод дерева\n");
 	printTree(tree);
 	printf("\nОбход preOrderTravers\n");
@@ -130,5 +165,10 @@ void task2()
 	inOrderTravers(tree);
 	printf("\n\nОбход postOrderTravers\n");
 	postOrderTravers(tree);
-
+	printf("Поиск элемента %d рекурсией\n", tmp);
+	Node* search = SearchRecurcive(tmp, tree);
+	printf("Элемент %d находится по адрессу %x\n\n", tmp, search);
+	printf("Поиск элемента %d циклом\n", tmp);
+	search = SearchCicle(tmp, tree);
+	printf("Элемент %d находится по адрессу %x", tmp, search);
 }
