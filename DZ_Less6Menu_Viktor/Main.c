@@ -2,6 +2,7 @@
 #include <locale.h>
 #include "Task1.h"
 #include "Task2.h"
+#include "Task3.h"
 
 #pragma warning(disable : 4996)
 
@@ -30,7 +31,7 @@ int main()
 		task2();
 		break;
 	case 3:
-		//task6();
+		task3();
 		break;
 	case 4:
 		//task4();
