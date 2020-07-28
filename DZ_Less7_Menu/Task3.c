@@ -1,18 +1,17 @@
-#include "Task2.h"
+#include "Task3.h"
 #include "Graphs.h"
 
-//Задача №2
-//	Написать рекурсивную функцию обхода графа в глубину.
+//Задача №3
+//	Написать функцию обхода графа в ширину.
 //Выполнил Виль В.В.
 
-void task2()
+void task3()
 {
 	int** graph;
 	int size = 4;
 	graph = ReadGraphFromFile("D:\\graph.txt", size);
 	
 	printf("\n");
-	DepthCrawl(graph, size, 1);
-
+	BreadthCrawl(graph, size, 1);
 	FreeGraph(graph, size);
 }

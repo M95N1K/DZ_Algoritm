@@ -145,11 +145,15 @@
     <ClCompile Include="Main.c" />
     <ClCompile Include="Task1.c" />
     <ClCompile Include="Task2.c" />
+    <ClCompile Include="Task3.c" />
+    <ClCompile Include="UQueue.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Graphs.h" />
     <ClInclude Include="Task1.h" />
     <ClInclude Include="Task2.h" />
+    <ClInclude Include="Task3.h" />
+    <ClInclude Include="UQueue.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
