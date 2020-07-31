@@ -142,6 +142,24 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.c" />
+    <ClCompile Include="Task1.c" />
+    <ClCompile Include="Task2.c" />
+    <ClCompile Include="Task3.c" />
+    <ClCompile Include="Task4.c" />
+    <ClCompile Include="UArrays.c" />
+    <ClCompile Include="UCountSort.c" />
+    <ClCompile Include="UMargeSort.c" />
+    <ClCompile Include="UQuickSort.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Task1.h" />
+    <ClInclude Include="Task2.h" />
+    <ClInclude Include="Task3.h" />
+    <ClInclude Include="Task4.h" />
+    <ClInclude Include="UArrays.h" />
+    <ClInclude Include="UCountSort.h" />
+    <ClInclude Include="UMargeSort.h" />
+    <ClInclude Include="UQuickSort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
