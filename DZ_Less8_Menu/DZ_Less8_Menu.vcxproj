@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{50600bd6-09e6-436c-835c-6373191c6b61}</ProjectGuid>
-    <RootNamespace>DZ_Algoritm</RootNamespace>
+    <ProjectGuid>{2ca0c1f5-758a-47fa-ae8f-c3cced110233}</ProjectGuid>
+    <RootNamespace>DZ_Less8_Menu</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -99,10 +99,11 @@
       <WarningLevel>Level3</WarningLevel>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
+      <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <CompileAs>CompileAsC</CompileAs>
+      <DisableSpecificWarnings>/wd4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -140,7 +141,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="MainSource.c" />
+    <ClCompile Include="Main.c" />
+    <ClCompile Include="Task1.c" />
+    <ClCompile Include="Task2.c" />
+    <ClCompile Include="Task3.c" />
+    <ClCompile Include="Task4.c" />
+    <ClCompile Include="UArrays.c" />
+    <ClCompile Include="UCountSort.c" />
+    <ClCompile Include="UMargeSort.c" />
+    <ClCompile Include="UQuickSort.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Task1.h" />
+    <ClInclude Include="Task2.h" />
+    <ClInclude Include="Task3.h" />
+    <ClInclude Include="Task4.h" />
+    <ClInclude Include="UArrays.h" />
+    <ClInclude Include="UCountSort.h" />
+    <ClInclude Include="UMargeSort.h" />
+    <ClInclude Include="UQuickSort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
